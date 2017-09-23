@@ -1,0 +1,25 @@
+.main-page-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.main-page-header-element {
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.main-page-header-element > a {
+    width: 100%;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+#map {
+    width: 100vw;
+    height: 90vh;
+    margin: 10px;
+}

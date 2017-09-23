@@ -1,0 +1,13 @@
+.details-page-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+
+#incident-details-map {
+    width: 100vw;
+    height: 40vh;
+    margin: 10px;
+}

@@ -1,0 +1,34 @@
+<div class="main-page-header">
+    <div class="main-page-header-element">
+        <a ui-sref="addIncident" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus"></span> Incident
+        </a>
+    </div>
+    <div class="main-page-header-element">
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-filter"></span>
+            <select
+                    required
+                    style="width: 100%"
+                    class="form-control"
+                    ng-model="selectedCategory"
+                    ng-change="applySelectedFilter()">
+                <option
+                        class="filter-category-option"
+                        ng-repeat="category in allCategories"
+                        value="{{category}}"
+                >
+                    {{category.value}} - ({{calculateMarkers(category)}})
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="main-page-header-element">
+        <a ui-sref="administration" class="btn btn-primary">
+            <span class="glyphicon glyphicon-user"></span> Administration
+        </a>
+    </div>
+</div>
+
+<div id="map"></div>

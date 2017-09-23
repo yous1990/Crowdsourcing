@@ -1,0 +1,39 @@
+<div class="city-map-header">
+    <div class="add-page-header-element">
+        <a ui-sref="landingCityPage" class="btn btn-primary">
+            <span class="glyphicon glyphicon-globe"></span> Menu Principal
+        </a>
+    </div>
+
+    <div class="city-map-header-element">
+        <a ui-sref="addIncident" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus"></span> Incident
+        </a>
+    </div>
+    <div class="city-map-header-element">
+        <a ui-sref="addLocale" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus"></span> Ajouter une Locale (Besoin d'authentification)
+        </a>
+    </div>
+    <div class="city-map-header-element">
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-filter"></span>
+            <select
+                    required
+                    style="width: 100%"
+                    class="form-control"
+                    ng-model="selectedCategory"
+                    ng-change="applySelectedFilter()">
+                <option
+                        class="filter-category-option"
+                        ng-repeat="category in allCategories"
+                        value="{{category}}"
+                >
+                    {{category.value}} - ({{calculateMarkers(category)}})
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div id="city-map"></div>

@@ -1,0 +1,33 @@
+{
+  "name": "crowdsourcing",
+  "version": "1.0.0",
+  "description": "This open-source  project is intended to increase the safety of each city dwellers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "city",
+    "safety",
+    "security",
+    "thieves",
+    "attacks",
+    "crowdsourcing"
+  ],
+  "author": "amaalej",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "leaflet": "^1.0.0-rc.1",
+    "leaflet.markercluster": "^1.0.0-rc.1.0",
+    "mongoose": "^4.3.4",
+    "open": "0.0.5",
+    "q": "^1.4.1",
+    "socket.io": "^1.4.5",
+    "angular": "^1.4.0",
+    "angular-ui-router": "~0.2.18",
+    "lodash": "~4.5.0",
+    "passport": "~0.3.2"
+  }
+}

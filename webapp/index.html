@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Secure City</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../node_modules/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css" />
+
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>-->
+
+
+  <script src="../node_modules/lodash/dist/lodash.js"></script>
+
+  <link rel="stylesheet" href="../node_modules/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <script src="../node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+
+<!--  <script src="http://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>-->
+
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+
+  <script src="app.js"></script>
+  <script src="components/main/main-controller.js"></script>
+  <script src="components/main/main-service.js"></script>
+  <link rel="stylesheet" href="components/main/main.css"/>
+
+
+  <script src="components/incident/form-add-incident/add-incident-form-controller.js"></script>
+  <script src="components/incident/form-add-incident/add-incident-form-service.js"></script>
+  <link rel="stylesheet" href="components/incident/form-add-incident/add-incident-form.css"/>
+
+
+  <script src="components/incident/incident-details/incident-details-controller.js"></script>
+  <script src="components/incident/incident-details/incident-details-service.js"></script>
+  <link rel="stylesheet" href="components/incident/incident-details/incident-details.css"/>
+
+  <script src="components/administration/administration-controller.js"></script>
+  <script src="components/administration/administration-service.js"></script>
+  <link rel="stylesheet" href="components/administration/administration.css"/>
+
+  <script src="components/city/add-city/add-city-controller.js"></script>
+  <script src="components/city/add-city/add-city-service.js"></script>
+  <link rel="stylesheet" href="components/city/add-city/add-city.css"/>
+
+  <script src="components/locale/add-locale-controller.js"></script>
+  <script src="components/locale/add-locale-service.js"></script>
+  <link rel="stylesheet" href="components/locale/add-locale.css"/>
+
+  <script src="components/city/city-map/city-map-controller.js"></script>
+  <script src="components/city/city-map/city-map-service.js"></script>
+  <link rel="stylesheet" href="components/city/city-map/city-map.css"/>
+
+  <script src="components/landing/landing-controller.js"></script>
+  <script src="components/landing/landing-service.js"></script>
+
+  <script src="services/utils/city-utils-service.js"></script>
+  <script src="services/utils/locale-utils-service.js"></script>
+
+</head>
+<body>
+  <div ui-view></div>
+</body>
+</html>

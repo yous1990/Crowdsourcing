@@ -1,0 +1,95 @@
+<div class="add-page-header">
+    <div class="add-page-header-element">
+        <button
+                ng-disabled="!addCityForm.$valid"
+                class="btn btn-primary"
+                ng-click="submitForm()">
+            <span class="glyphicon glyphicon-plus"></span>
+            Ajouter
+        </button>
+    </div>
+    <div class="add-page-header-element">
+        <button
+                class="btn btn-primary"
+                ng-click="getMyPosition()">
+            <span class="glyphicon glyphicon-screenshot"></span>
+            Ma Position
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <span class="badge"><span class="glyphicon glyphicon-map-marker"></span> Indiquez votre ville en déplaçant le Marker</span>
+    </div>
+</div>
+<div id="add-city-map"></div>
+
+
+<form name="addCityForm">
+
+    <div class="row">
+        <div class="col-lg-2">
+            Nom de la ville:
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <input
+                    required
+                    type="text"
+                    class="form-control"
+                    ng-model="newCity.name"
+            >
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-2">
+            Continent
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <select
+                    required
+                    class="form-control"
+                    ng-change="selectContinent()"
+                    ng-model="newCity.continent">
+                <option
+                        ng-repeat="continent in continents"
+                        value="{{continent}}"
+                >
+                    {{continent.value}}
+                </option>
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+            Pays
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <select
+                    required
+                    class="form-control"
+                    ng-model="newCity.country">
+                <option
+                        ng-repeat="country in countries"
+                        value="{{country}}"
+                >
+                    {{country.name}}
+                </option>
+            </select>
+
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,24 @@
+.city-map-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.city-map-header-element {
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.city-map-header-element > a {
+    width: 100%;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+#city-map {
+    width: 100vw;
+    height: 85vh;
+}

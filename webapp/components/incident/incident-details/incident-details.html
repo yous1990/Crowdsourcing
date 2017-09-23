@@ -1,0 +1,67 @@
+<div class="details-page-header">
+    <div class="add-page-header-element">
+        <a ui-sref="landingCityPage" class="btn btn-primary">
+            <span class="glyphicon glyphicon-globe"></span> Menu Principal
+        </a>
+    </div>
+</div>
+
+
+<h4>{{incident.name}}</h4>
+
+<br>
+
+<div id="incident-details-map"></div>
+
+<button class="btn btn-primary" type="button" ng-click="appreciate(incident)">
+    <span class="glyphicon glyphicon-thumbs-up"> Approuver </span> <span class="badge">{{incident.credibility.thumbsUp}}</span>
+</button>
+
+<button class="btn btn-primary" type="button"  ng-click="depreciate(incident)">
+    <span class="glyphicon glyphicon-thumbs-down"> Désapprouver </span> <span class="badge">{{incident.credibility.thumbsDown}}</span>
+</button>
+
+<button class="btn btn-primary" type="button" disabled ng-click="modify(incident)">
+    Modifier
+</button>
+
+
+<div class="row">
+    <div class="col-lg-6">
+
+        <li class="list-group-item">
+            Description: {{incident.description}}<br/>
+        </li>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+
+        <li class="list-group-item">
+            Date: {{incident.creationDate}}<br/>
+        </li>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <li class="list-group-item">
+            Catégorie: {{incident.category.value}}<br/>
+        </li>
+    </div>
+</div>
+<!--
+<div class="row">
+    <div class="col-lg-6">
+        <li class="list-group-item">
+
+            <img src="  {{incident.image}}" class="img-circle"  width="304" height="236"><br/>
+
+        </li>
+    </div>
+</div>-->
+
+</div>
+</ul>
+</div>

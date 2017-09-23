@@ -1,0 +1,36 @@
+.add-page-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.add-page-header-element {
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.add-page-header-element > .btn {
+    width:100%;
+    flex-basis: 100%;
+}
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+    -webkit-transition: margin 0.2s;
+    -moz-transition: margin 0.2s;
+    -o-transition: margin 0.2s;
+    transition: margin 0.2s;
+}
+
+#add-locale-map {
+    width: 100vw;
+    height: 40vh;
+    margin: 10px;
+}

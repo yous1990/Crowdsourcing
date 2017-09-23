@@ -1,0 +1,68 @@
+<div class="admin-page-header">
+    <a ui-sref="landingCityPage" class="btn btn-primary">
+        <span class="glyphicon glyphicon-globe"></span> Carte
+    </a>
+</div>
+
+
+<br/>
+<table id="example" class="table table-striped table-bordered" >
+    <thead>
+
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Catégorie</th>
+        <th Colspan="2">Crédibilité</th>
+        <th Colspan="2">Actions</th>
+    </tr>
+    <tr>
+        <th>
+            Rechercher: <input type="text" ng-model="myFilter.name">
+        </th>
+        <th>
+            Rechercher: <input type="text" ng-model="myFilter.description">
+        </th>
+        <th>
+            Rechercher: <input type="text" ng-model="myFilter.category.value">
+        </th>
+        <th Colspan="2"></th>
+        <th Colspan="2"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="incident in incidents | filter : myFilter" >
+        <td><a ui-sref="incidentDetails({id: incident._id})">{{incident.name}}</a></td>
+        <td>{{incident.description}}</td>
+        <td>{{incident.category.value}}</td>
+
+
+        <td >
+            <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-thumbs-up">
+                </span> <span class="badge">{{incident.credibility.thumbsUp}}</span>
+            </button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+                <span class="badge">{{incident.credibility.thumbsDown}}</span>
+            </button>
+        </td>
+
+        <td>
+            <button class="btn btn-danger" ng-click="deleteIncidentCtrl(incident)">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </td>
+        <td>
+            <button class="btn btn-danger" ng-click="updateIncident(incident)">
+                <span class="glyphicon glyphicon-edit"></span>
+            </button>
+        </td>
+    </tr>
+
+
+    </tbody>
+</table>

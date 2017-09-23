@@ -1,0 +1,84 @@
+<div class="main-page-header-element">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <span class="badge"><span class="glyphicon glyphicon-map-marker"></span> Choisissez votre ville ou ajoutez la</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            Continent
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <select
+                    required
+                    class="form-control"
+                    ng-change="selectContinent()"
+                    ng-model="myContinent">
+                <option
+                        ng-repeat="continent in continents"
+                        value="{{continent}}"
+                >
+                    {{continent.value}}
+                </option>
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+            Pays
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <select
+                    required
+                    class="form-control"
+                    ng-change="loadCities()"
+                    ng-model="myCountry">
+                <option
+                        ng-repeat="country in countries"
+                        value="{{country}}"
+                >
+                    {{country.name}}
+                </option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            Ville
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <select
+                    required
+                    class="form-control"
+                    ng-change="showCityMap()"
+                    ng-model="myCity">
+                <option
+                        ng-repeat="city in cities"
+                        value="{{city}}"
+                >
+                    {{city.name}}
+                </option>
+            </select>
+
+        </div>
+    </div>
+
+    <br/>
+    <a ui-sref="addCity" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span> Ajouter votre ville
+    </a>
+</div>
